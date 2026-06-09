@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Institute of Technology</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #003366;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e6b800;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: #003366;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #ffcc00;
+            margin: 10px auto 0;
+        }
+
+        /* Grid Cards (Programs & Features) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #003366;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h4 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        /* About Section */
+        .about-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 15px;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>APEX INSTITUTE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h2>Shaping the Leaders of Tomorrow</h2>
+        <p>Join a community dedicated to academic excellence, innovation, and real-world impact.</p>
+        <a href="#programs" class="btn">Explore Programs</a>
+    </div>
+
+    <div class="container">
+        
+        <section id="about">
+            <h3>About Our Institute</h3>
+            <div class="about-text">
+                <p>Founded with a vision to empower students through quality education, Apex Institute offers state-of-the-art facilities, world-class faculty, and a vibrant campus culture. We bridge the gap between theoretical knowledge and practical industry demands.</p>
+            </div>
+        </section>
+
+        <section id="programs">
+            <h3>Our Featured Programs</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>School of Engineering</h4>
+                    <p>Explore cutting-edge courses in Computer Science, Mechanical, and Electrical Engineering designed for the future.</p>
+                </div>
+                <div class="card">
+                    <h4>Business Administration</h4>
+                    <p>Develop leadership, strategic thinking, and entrepreneurial skills to thrive in the modern corporate world.</p>
+                </div>
+                <div class="card">
+                    <h4>Data Science & AI</h4>
+                    <p>Master data analysis, machine learning algorithms, and predictive modeling with our specialized curriculum.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3>Contact Us</h3>
+            <div class="grid">
+                <div class="card">
+                    <h4>Campus Address</h4>
+                    <p>123 Education Lane, University Hub, Tech City, 560001</p>
+                </div>
+                <div class="card">
+                    <h4>Email & Phone</h4>
+                    <p>Email: admissions@apexinstitute.edu<br>Phone: +1 (555) 019-2834</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Apex Institute. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
